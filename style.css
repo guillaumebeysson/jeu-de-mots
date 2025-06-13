@@ -147,6 +147,24 @@ button:active {
     transition: width 1s linear, background-color 0.5s ease;
 }
 
+.time-options {
+    margin-bottom: 15px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#timeSelect {
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    background: #e0e0e0;
+    box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+}
+
 /* Toggle Button */
 #themeToggle {
     font-size: 0.9em;

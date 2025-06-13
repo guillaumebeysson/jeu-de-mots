@@ -17,7 +17,7 @@
         <div class="container">
             <div id="game">
                 <div id="wordDisplay">Clique sur démarrer</div>
-                <div id="timer">30</div>
+                <div id="timer">0</div>
                 <div id="progressBarContainer">
                     <div id="progressBar"></div>
                 </div>
@@ -25,6 +25,14 @@
                     <button id="startBtn">Démarrer</button>
                     <button id="validateBtn" class="hidden">✅</button>
                     <button id="passBtn" class="hidden">Passer</button>
+                </div>
+                <div class="time-options">
+                    <label for="timeSelect">Durée :</label>
+                    <select id="timeSelect">
+                        <option value="30" selected>30s</option>
+                        <option value="40">40s</option>
+                        <option value="60">60s</option>
+                    </select>
                 </div>
                 <div id="score" class="hidden">Score : 0</div>
                 <div id="historique" class="hidden"></div>

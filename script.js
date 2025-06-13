@@ -2,8 +2,6 @@ let mots = [];
 let motIndex = 0;
 let score = 0;
 let timer;
-let timeLeft = 30;
-
 let isSoundEnabled = true;
 const sonValider = new Audio("valider.mp3");
 const sonPasser = new Audio("passer.mp3");
@@ -34,10 +32,10 @@ function showNextWord() {
 
 function startGame() {
     lancerPleinEcran();
-
+    const selectedTime = parseInt(document.getElementById("timeSelect").value, 10);
+    timeLeft = selectedTime;
     motIndex = 0;
     score = 0;
-    timeLeft = 30;
     document.getElementById("progressBar").style.width = "100%";
     motsValides = [];
     motsPasses = [];
@@ -53,7 +51,7 @@ function startGame() {
         timeLeft--;
         timerDisplay.textContent = timeLeft;
 
-        const progress = (timeLeft / 30) * 100;
+        const progress = (timeLeft / selectedTime) * 100;
         const progressBar = document.getElementById("progressBar");
         progressBar.style.width = progress + "%";
 
@@ -61,7 +59,7 @@ function startGame() {
         if (progress > 66) {
             progressBar.style.backgroundColor = "#4caf50"; // vert
         } else if (progress > 33) {
-            progressBar.style.backgroundColor = "#fbc02d"; // orange
+            progressBar.style.backgroundColor = "#d28e18"; // orange
         } else {
             progressBar.style.backgroundColor = "#f44336"; // rouge
         }
