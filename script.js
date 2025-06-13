@@ -54,7 +54,17 @@ function startGame() {
         timerDisplay.textContent = timeLeft;
 
         const progress = (timeLeft / 30) * 100;
-        document.getElementById("progressBar").style.width = progress + "%";
+        const progressBar = document.getElementById("progressBar");
+        progressBar.style.width = progress + "%";
+
+        // Changer la couleur dynamiquement selon le pourcentage
+        if (progress > 66) {
+            progressBar.style.backgroundColor = "#4caf50"; // vert
+        } else if (progress > 33) {
+            progressBar.style.backgroundColor = "#fbc02d"; // orange
+        } else {
+            progressBar.style.backgroundColor = "#f44336"; // rouge
+        }
 
         if (timeLeft <= 0) {
             endGame();
