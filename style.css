@@ -1,0 +1,191 @@
+/* Fond général */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #e0e0e0;
+    color: #333;
+    height: 100vh;
+}
+
+
+/* Conteneur principal */
+.container {
+    width: 500px;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 25px;
+    background: #e0e0e0;
+    box-shadow:
+        10px 10px 30px #bebebe,
+        -10px -10px 30px #ffffff;
+}
+
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#themeToggle {
+    width: 100px;
+    height: 50px;
+}
+
+#soundToggle {
+    width: 100px;
+    height: 50px;
+}
+
+/* Mot affiché */
+#wordDisplay {
+    font-size: 2.4em;
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: inset 5px 5px 10px #bebebe,
+        inset -5px -5px 10px #ffffff;
+    text-align: center;
+}
+
+/* Timer */
+#timer {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Score */
+#score {
+    font-size: 2em;
+    margin: 20px auto;
+    text-align: center;
+
+}
+
+/* Historique */
+#historique {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+#historique ul {
+    list-style: none;
+    padding: 0;
+}
+
+#historique li {
+    margin: 2px 0;
+}
+
+/* Boutons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border-radius: 12px;
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    box-shadow:
+        5px 5px 10px #bebebe,
+        -5px -5px 10px #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow:
+        inset 5px 5px 10px #bebebe,
+        inset -5px -5px 10px #ffffff;
+}
+
+/* Bouton valider ✅ */
+#validateBtn {
+    color: green;
+}
+
+/* Bouton passer ❌ */
+#passBtn {
+    color: #c0392b;
+}
+
+/* Cacher */
+.hidden {
+    display: none;
+}
+
+/* Timer Progress Bar */
+#progressBarContainer {
+    width: 100%;
+    height: 15px;
+    background: #d1d1d1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0 30px 0;
+    box-shadow: inset 5px 5px 10px #bebebe,
+        inset -5px -5px 10px #ffffff;
+}
+
+#progressBar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #4caf50, #fbc02d, #f44336);
+    transition: width 1s linear;
+}
+
+/* Toggle Button */
+#themeToggle {
+    font-size: 0.9em;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* 🌙 Mode sombre */
+body.dark {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+body.dark .container {
+    background: #1e1e1e;
+    box-shadow:
+        10px 10px 30px #141414,
+        -10px -10px 30px #2a2a2a;
+}
+
+body.dark #wordDisplay,
+body.dark button,
+body.dark #progressBarContainer {
+    background: #1e1e1e;
+    box-shadow:
+        inset 5px 5px 10px #141414,
+        inset -5px -5px 10px #2a2a2a;
+}
+
+body.dark button {
+    color: #eee;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+
+}

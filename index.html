@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu de mots</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+            <button id="themeToggle">🌓</button>
+            <button id="soundToggle">🔊</button>
+        </div>
+        <div class="container">
+            <div id="game">
+                <div id="wordDisplay">Clique sur démarrer</div>
+                <div id="timer">30</div>
+                <div id="progressBarContainer">
+                    <div id="progressBar"></div>
+                </div>
+                <div class="buttons">
+                    <button id="startBtn">Démarrer</button>
+                    <button id="validateBtn" class="hidden">✅</button>
+                    <button id="passBtn" class="hidden">Passer</button>
+                </div>
+                <div id="score" class="hidden">Score : 0</div>
+                <div id="historique" class="hidden"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
